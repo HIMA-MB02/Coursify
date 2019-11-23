@@ -1,0 +1,12 @@
+#candidate-view {
+    overflow: auto;
+}
+
+#table-heading {
+    line-height: 60px;
+    background-color: var(--primary-color) !important;
+    color: var(--this-white);
+}
+tr {
+    color: var(--this-white);
+}

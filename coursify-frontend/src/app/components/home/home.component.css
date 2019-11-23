@@ -1,0 +1,82 @@
+#nav {
+    position: absolute;
+    z-index: 10;
+    height: 16%;
+    background-color: var(--body-color);
+}
+#inner-nav {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#header-text {
+    font-family: 'Arvo', serif;
+    margin-bottom: 0px;
+    margin-top: 8px;
+    color: var(--secondary-color);
+}
+.card {
+    position: absolute;
+    height: 100%;
+    width: 100hw;
+    z-index: 1;
+    background-color: var(--secondary-color);
+}
+
+.card-body {
+    position: absolute;
+    top: 50%;
+    width: inherit;
+    height:50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.card-title {
+    font-family: 'Arvo', serif;
+    font-size: 80px;
+}
+.card-subtitle {
+    font-family: 'Arvo', serif;
+    color: var(--primary-color);
+}
+#text-white {
+    color: var(--this-white);
+}
+#text-secondary {
+    color: var(--primary-color);
+}
+#router-links {
+    list-style-type: none;
+    position: absolute;
+    margin: 0;
+    padding-right: 30px;
+    float: right;
+    height: 100%;
+    text-align: right;
+    /* border style of navigation links */
+    border-left-width: 3px;
+    border-color: var(--primary-color);
+    border-left-style: solid;
+}
+
+#router-link h1{
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    z-index: 15;
+    color: var(--primary-color);
+    opacity: 0.8;
+    font-family: 'Arvo', serif;
+}
+tr {
+    color: var(--this-white);
+}

@@ -1,0 +1,60 @@
+<div class="container-fluid" id="loginComponent" [@fadeInOut]>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="text-center">
+                <h3 style="color: var(--primary-color);">LOGIN</h3>
+                <h6>CRUD Portal 2.0</h6>
+            </div>
+            <br />
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <input type="email" placeholder="email" class="form-control" formControlName="email" id="email" />
+
+                    <div *ngIf="submitted && loginForm.controls.email.errors" class="errors">
+                        <div class="text-danger" *ngIf="loginForm.controls.email.errors.required">
+                            Email is required..
+                        </div>
+                    </div>
+                </div>
+                <!-- end of email text box -->
+
+                <div class="form-group">
+                    <input type="password" placeholder="password" class="form-control" formControlName="password"
+                        id="password" />
+
+                    <div *ngIf="submitted && loginForm.controls.password.errors" class="errors">
+                        <div class="text-danger" *ngIf="loginForm.controls.password.errors.required">
+                            Password is required..
+                        </div>
+                    </div>
+                </div>
+                <!-- end of password text box -->
+                <div *ngIf="invalidLogin" class="error text-center">
+                    <div class="text-danger">
+                        Invalid Credentials!
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="success">
+                            <h2>LOGIN</h2>
+                        </button>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <button class="danger" [routerLink]="['']">
+                            <h2>CANCEL</h2>
+                        </button>
+                    </div>
+                </div>
+                <br /><br />
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <button [routerLink]="['/site/register']">
+                            <h2>REGISTER</h2>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

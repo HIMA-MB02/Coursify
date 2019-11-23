@@ -1,0 +1,60 @@
+<!--NAVIGATION-->
+<div id="nav" class="container-fluid">
+    <div class="row">
+        <div id="inner-nav">
+            <h3 class="row">
+                <img style="color:var(--secondary-color)" src="../../../assets/images/todos.png" width="60px" />&nbsp;
+                <h1 id="header-text">COURSIFY</h1>
+            </h3>
+        </div>
+        <!-- <div class="col text-right">
+            <button class="btn btn-success" [routerLink] = "['/login']">Log in</button>
+        </div> -->
+    </div>
+</div>
+
+<!--HOME BODY-->
+<div class="card container-fluid">
+    <div class="card-body row">
+        <div class="col-md-8">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="col-md-4">
+            <ul id="router-links" [@fadeInOut]>
+                <li id="router-link">
+                    <button (click)="setHome()">
+                        <h1>HOME</h1>
+                    </button>
+                </li>
+                <li id="router-link">
+                    <button [routerLink]="['/site/about']">
+                        <h1>ABOUT US</h1>
+                    </button>
+                </li>
+                <li id="router-link">
+                    <button (click)="setContact()">
+                        <h1>CONTACT US</h1>
+                    </button>
+                </li>
+                <li id="router-link">
+                    <button [routerLink]="['/site/login']">
+                        <h1>LOG IN</h1>
+                    </button>
+                </li>
+                <li id="router-link">
+                    <button [routerLink]="['/site/register']">
+                        <h1>REGISTER</h1>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer class="container-fluid">
+    <div class="row">
+        <div class="col text-center">
+            <h6>@COPYRIGHT G-PRODUCTIONS</h6>
+        </div>
+    </div>
+</footer>

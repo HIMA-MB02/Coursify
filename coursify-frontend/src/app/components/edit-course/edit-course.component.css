@@ -1,0 +1,11 @@
+
+tr {
+    color: var(--this-white);
+}
+
+.danger[ng-reflect-router-link]{
+    color:  var(--primary-color);
+}
+.danger[ng-reflect-router-link]:hover {
+    color:  rgb(255, 61, 61);
+}

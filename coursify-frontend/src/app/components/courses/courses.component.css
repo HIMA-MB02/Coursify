@@ -1,0 +1,61 @@
+#course-list {
+    font-family: 'Arvo', serif;
+    background-color: var(--secondary-color)
+}
+.container {
+    background-color: var(--secondary-color);
+}
+#header {
+    padding: 20px;
+    border-bottom-width: 3px;
+    border-color: var(--primary-color);
+    border-bottom-style: solid;
+}
+#header-text {
+    font-family: 'Arvo', serif;
+    color: var(--primary-color);
+}
+#options {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--primary-color);
+    color: var(--this-white) !important;
+}
+#table-section {
+    min-height: 300px;
+}
+tr {
+    color: var(--this-white);
+}
+#delete:hover {
+    color: red;
+}
+#general:hover {
+    color: white;
+}
+ #table-heading {
+    line-height: 60px;
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color);
+ }
+ #log-out {
+    background-color: var(--primary-color) !important;
+    color: rgb(117, 7, 7);
+ }
+
+ #log-out:hover {
+    background-color: var(--primary-color) !important;
+    color: red;
+ }
+ #sort-button {
+     padding: 0;
+     margin: 0;
+     min-height: 100%;
+     min-width: 100%; 
+     background-color: var(--primary-color);
+     color: var(--secondary-color);
+ }
+ #sort-button:hover {
+    background-color: var(--primary-color-dark);
+    color: var(--this-white);
+}

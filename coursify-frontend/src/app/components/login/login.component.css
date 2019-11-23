@@ -1,0 +1,30 @@
+#loginComponent {
+    background-color: var(--secondary-color);
+    position: absolute;
+    min-height: 100%;
+    width: 100hw;
+    top: 0;
+    font-family: 'Arvo', serif;
+}
+
+#loginComponent .row .col-md-4{
+    position: absolute;
+    top: 40%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.swal-border {
+    border: 3px solid white;
+  }
+
+#watermark-text {
+    font-family: 'Arvo', serif;
+    color: var(--primary-color);
+    padding-top: 5%;
+    opacity: 0.6;
+}
+
+tr {
+    color: var(--this-white);
+}

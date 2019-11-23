@@ -1,0 +1,127 @@
+<div class="container-fluid" id="candidate-view">
+
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="text-center">
+                <h2>CANDIDATE DETAILS</h2>
+            </div>
+            <form [formGroup]="viewForm" (ngSubmit)="onSubmit()">
+                <!---Start of First Name input Box-->
+                <div class="form-group">
+                    <input type="text" placeholder="First Name" class="form-control" formControlName="firstName"
+                        id="firstName" />
+
+                    <div *ngIf="submitted && viewForm.controls.firstName.errors" class="errors">
+                        <div class="text-danger" *ngIf="viewForm.controls.firstName.errors.required">
+                            Please enter a First Name!
+                        </div>
+                        Some Validator
+                    </div>
+                </div>
+
+                <!---Start of Last Name input Box-->
+                <div class="form-group">
+                    <input type="text" placeholder="Last Name" class="form-control" formControlName="lastName"
+                        id="lastName" />
+
+                    <div *ngIf="submitted && viewForm.controls.lastName.errors" class="errors">
+                        <div class="text-danger" *ngIf="viewForm.controls.lastName.errors.required">
+                            Please enter a Last Name!
+                        </div>
+                        Some Validator
+                    </div>
+                </div>
+                <!---Start of Age input Box-->
+                <div class="form-group">
+                    <input type="text" placeholder="Age" class="form-control" formControlName="age" id="age" />
+
+                    <div *ngIf="submitted && viewForm.controls.age.errors" class="errors">
+                        <div class="text-danger" *ngIf="viewForm.controls.age.errors.required">
+                            Please enter an age!
+                        </div>
+                        Some Validator
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 offset-md-3">
+                        <button type="submit" class="success">
+                            <h2>SAVE</h2>
+                        </button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="danger" (click)="routeCancel()">
+                            <h2>CANCEL</h2>
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    <br />
+    <!--START OF CANDIDATES VIEW TABLE-->
+    <h2 style="color: var(--primary-color);">CANDIDATE COURSES</h2>
+    <div class="row" style="min-height: 200px">
+        <table class="col text-center">
+            <tr id="table-heading">
+                <th></th>
+                <th>
+                    Course Name
+                </th>
+                <th>
+                    Domain
+                </th>
+                <th>
+                    Trainer
+                </th>
+                <th>
+                    Start Date
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    Options
+                </th>
+            </tr>
+            <tr class="table" *ngFor="let course of courses; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{course.courseName}}</td>
+                <td>{{course.domainName}}</td>
+                <td>{{course.trainerName}}</td>
+                <td>{{course.startDate}}</td>
+                <td *ngIf="course.isActive == true">Active</td>
+                <td *ngIf="course.isActive == false">Inactive</td>
+                <td>
+                    <span id="delete" (click)="deleteCandidateCourse(course)">
+                        <i class="fa fa-trash fa-lg"></i>
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 offset-md-3">
+            <!--Start of Course Name input Box-->
+            <div class="form-group">
+                <select class="form-control" [(ngModel)]="selectedCourseID">
+                    <!-- <option  [selected]="true">Select Coure</option> -->
+                    <option *ngFor="let course of courseOptions" value="{{course._id}}" [selected]="course.courseName">
+                        {{course.courseName}}
+                    </option>
+                    <!-- [selected] = "course.courseName" -->
+                </select>
+            </div>
+        </div>
+        <div class="col-md-2 text-left">
+            <button (click)="addCourseToCandidate()" class="success">
+                <h2>ADD</h2>
+            </button>
+        </div>
+    </div>
+
+</div>

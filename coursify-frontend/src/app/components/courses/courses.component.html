@@ -1,0 +1,70 @@
+<div id="course-list" class="container-fluid" [@fadeInOut]>
+    <div class="row">
+        <div class="col">
+            <div id="table-section" class="row">
+                <div class="col text-center">
+                    <h3>COURSES</h3>
+                    <div class="row">
+                        <table class="col text-center">
+                            <tr id="table-heading">
+                                <th>
+                                    <button (click)="sort('')" id="sort-button">
+                                        x</button>
+                                </th>
+                                <th>
+                                    <button (click)="sort('courseName')" id="sort-button">
+                                        Course Name
+                                    </button>
+                                </th>
+                                <th>
+                                    <button (click)="sort('domainName')" id="sort-button">
+                                        Domain
+                                    </button>
+                                </th>
+                                <th>
+                                    <button (click)="sort('trainerName')" id="sort-button">
+                                        Trainer
+                                    </button>
+                                </th>
+                                <th>
+                                    <button (click)="sort('startDate')" id="sort-button">
+                                        Start Date
+                                    </button>
+                                </th>
+                                <th>
+                                    <button (click)="sort('isActive')" id="sort-button">
+                                        Status
+                                    </button>
+                                </th>
+                                <th>
+
+                                </th>
+                            </tr>
+                            <tr class="table" *ngFor="let course of courses; let i = index">
+                                <td>{{i+1}}</td>
+                                <td>{{course.courseName}}</td>
+                                <td>{{course.domainName}}</td>
+                                <td>{{course.trainerName}}</td>
+                                <td>{{course.startDate}}</td>
+                                <td *ngIf="course.isActive == true">Active</td>
+                                <td *ngIf="course.isActive == false">Inactive</td>
+                                <td>
+                                    <span id="delete" (click)="deleteCourse(course)">
+                                        <i class="fa fa-trash fa-lg"></i>
+                                    </span>
+                                    &nbsp;&nbsp;
+                                    <span id="general" (click)="editCourse(course._id)">
+                                            <i class="fa fa-edit fa-lg"></i>
+                                    </span>&nbsp;&nbsp;
+                                    <span id="general" (click)="expandCourse(course)">
+                                        <i class="fa fa-info fa-lg"></i>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

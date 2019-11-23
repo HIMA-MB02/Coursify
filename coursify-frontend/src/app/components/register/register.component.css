@@ -1,0 +1,31 @@
+
+
+#addCourseComponent .row .col-md-4{
+    position: absolute;
+    top: 40%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+tr {
+    color: var(--this-white);
+}
+#watermark-text {
+    font-family: 'Arvo', serif;
+    color: var(--primary-color);
+    padding-top: 5%;
+    opacity: 0.6;
+}
+
+.success:hover{
+    color:  rgb(132, 255, 132);
+}
+.danger[ng-reflect-router-link]{
+    color:  var(--primary-color);
+}
+.danger[ng-reflect-router-link]:hover {
+    color:  rgb(255, 61, 61);
+}
+
+div.text-danger{
+    text-align: left;
+}

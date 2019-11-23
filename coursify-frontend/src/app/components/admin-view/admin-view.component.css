@@ -1,0 +1,105 @@
+
+.container-fluid {
+    font-family: 'Arvo', serif;
+}
+
+#nav {
+    position: absolute;
+    z-index: 10;
+    height: 16%;
+    background-color: var(--body-color);
+}
+#inner-nav {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: var(--secondary-color);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.white-color  {
+    color: white;
+}
+#header-text {
+    margin-bottom: 0px;
+    margin-top: 8px;
+}
+
+hr {
+    background-color: var(--primary-color);
+}
+
+#view {
+    position: fixed;
+    overflow-y:scroll;    
+    height: 100%;
+    width: 100hw;
+    z-index: 1;
+    background-color: var(--secondary-color);
+}
+#view-body {
+    position: absolute;
+    top: 50%;
+    width: inherit;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#menus {
+            /* border style of navigation links */
+        border-right-width: 1px;
+        border-color: var(--primary-color);
+        border-right-style: solid;
+        height: 600px;
+}
+#router-link{
+    list-style-type: none;
+    margin: 0;
+}
+
+#views {
+        /* border style of navigation links */
+        border-left-width: 1px;
+        border-color: var(--primary-color);
+        border-left-style: solid;
+        height: 600px;
+        text-align: center;
+}
+
+#contains {
+    padding-top: 150px;
+}
+#btn-align {
+
+    padding-top: 10%;
+}
+#question-text {
+    padding-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+#logout {
+    text-decoration: none;
+    color: var(--this-red);
+}
+#logout:hover {
+    text-decoration: none;
+    color: var(--this-red-hover);
+}
+tr {
+    color: var(--this-white);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    z-index: 15;
+    color: var(--primary-color);
+    opacity: 0.8;
+    font-family: 'Arvo', serif;
+}

@@ -1,0 +1,47 @@
+<div id="course-list" class="container-fluid" [@fadeInOut]>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div id="table-section" class="row">
+                <div class="col text-center">
+                    <h2>{{course.courseName | uppercase }} &nbsp;BY &nbsp;{{ course.trainerName| uppercase }}</h2>
+                    <h3>SUBSCRIBED CANDIDATES</h3>
+                    <div class="row">
+                        <table class="col text-center">
+                            <tr id="table-heading">
+                                <th>
+                                    <button (click)="sort('')" id="sort-button">
+                                        x</button>
+                                </th>
+                                <th>
+                                    <button (click)="sort('firstName')" id="sort-button">
+                                        First Name</button>
+
+                                </th>
+                                <th>
+                                    <button (click)="sort('lastName')" id="sort-button">
+                                        Last Name</button>
+                                </th>
+                                <th>
+                                    <button (click)="sort('age')" id="sort-button">
+                                        Age</button>
+                                </th>
+                                <th>
+                                    Options
+                                </th>
+                            </tr>
+                            <tr class="table" *ngFor="let candidate of candidates; let i = index">
+                                <td>{{i+1}}</td>
+                                <td>{{candidate.firstName}}</td>
+                                <td>{{candidate.lastName}}</td>
+                                <td>{{candidate.age}}</td>
+                                <td>
+                                    <button (click)="viewCandidates(candidate)">View</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

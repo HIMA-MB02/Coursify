@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body{
+    padding: 0;
+    margin: 0;
+  }
+  html{
+    height: 100%;
+  }
+  body{
+    min-height: 100%;
+    color: var(--body-color);
+    font-family: 'Arvo', serif;
+ }
+
+  :root {
+      --body-color: rgba(240,255,255);
+      --primary-color: #86C232;
+      --primary-color-dark: #61892F;
+      --secondary-color: #222629;
+      --this-white: rgba(240,255,255,0.8);
+      --this-red: rgb(190, 0, 0);
+      --this-red-hover: red;
+  }
+
+a[ng-reflect-router-link]:hover {
+    color:  var(--this-white);
+}
+a[ng-reflect-router-link] {
+    color:rgb(33, 37, 41);
+    text-decoration: underline;
+}
+/*STYLE FOR BUTTONS*/
+button {
+    color:var(--primary-color);
+    text-decoration: underline;
+    background-color: var(--secondary-color);
+    border: 0px;
+    outline: none;
+}
+button:active{
+    border: 0;
+    outline: none;
+}
+button:hover {
+    color:  azure;
+    outline: none;
+}
+button:focus {
+    outline: none;
+}
+.success:hover{
+    color:  rgb(132, 255, 132);
+}
+
+.danger:hover{
+    color:  rgb(255, 61, 61);
+}
+
+
+tr:hover{
+    background-color: var(--primary-color-dark);
+    color: black !important;
+}
+
+tr:hover button {
+    background-color: var(--primary-color-dark);
+    color: black;
+}
+
+tr:hover button:hover {
+    color: white;
+}

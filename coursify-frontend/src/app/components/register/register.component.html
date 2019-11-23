@@ -1,0 +1,109 @@
+<div class="container-fluid" id="addCourseComponent" [@fadeInOut]>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <div class="text-center">
+                        <h2>REGISTER ADMINISTRATOR</h2>
+                    </div>
+                </div>
+                <!---Start of First Name input Box-->
+                <div class="form-group">
+                    <input type="text" placeholder="First Name" class="form-control" formControlName="firstName"
+                        id="firstName" />
+
+                    <div *ngIf="submitted && addForm.controls.firstName.errors" class="errors">
+                        <div class="text-danger" *ngIf="addForm.controls.firstName.errors.required">
+                            Please enter First Name!
+                        </div>
+                    </div>
+                </div>
+
+                <!---Start of Last Name input Box-->
+                <div class="form-group">
+                    <input type="text" placeholder="Last Name" class="form-control" formControlName="lastName"
+                        id="lastName" />
+
+                    <div *ngIf="submitted && addForm.controls.lastName.errors" class="errors">
+                        <div class="text-danger" *ngIf="addForm.controls.lastName.errors.required">
+                            Please enter a Last Name!
+                        </div>
+                    </div>
+                </div>
+                <!---Start of Email input Box-->
+                <div class="form-group">
+                    <input type="text" placeholder="Email" class="form-control" formControlName="email" id="email" />
+
+                    <div *ngIf="submitted && addForm.controls.email.errors" class="errors">
+                        <div class="text-danger" *ngIf="addForm.controls.email.errors.required">
+                            Please enter an email!
+                        </div>
+                    </div>
+                </div>
+
+                <!---Start of password input Box-->
+                <div class="form-group">
+                    <input type="password" placeholder="Password" class="form-control" formControlName="password"
+                        id="password" />
+
+                    <div *ngIf="submitted && addForm.controls.password.errors" class="errors">
+                        <div class="text-danger" *ngIf="addForm.controls.password.errors.required">
+                            Please enter a password!
+                        </div>
+                    </div>
+                </div>
+
+                <!---Start of confirm password input Box-->
+                <div class="form-group">
+                    <input type="password" placeholder="Confirm Password" class="form-control" formControlName="confirmPassword"
+                        id="confirmPassword" />
+
+                    <div *ngIf="submitted && addForm.controls.confirmPassword.errors" class="errors">
+                        <div class="text-danger" *ngIf="addForm.controls.confirmPassword.errors.required">
+                            Please enter a confirm password!
+                        </div>
+                    </div>
+                </div>
+                <!---Start of secret key input Box-->
+                <div class="form-group">
+                        <input type="password" placeholder="OTP" class="form-control" formControlName="secretKey"
+                            id="secretKey" />
+    
+                        <div *ngIf="submitted && addForm.controls.secretKey.errors" class="errors">
+                            <div class="text-danger" *ngIf="addForm.controls.secretKey.errors.required">
+                                Please enter the OTP!
+                            </div>
+                        </div>
+                    </div>
+
+                <!---Start of role input Box-->
+                <div class="form-group">
+                    <select class="form-control" formControlName="role">
+                        <option value="" selected>Select Role</option>
+                        <option value="COURSE_ADMIN">COURSE ADMIN</option>
+                        <option value="CANDIDATE_ADMIN" >CANDIDATE ADMIN</option>
+                    </select>
+
+                    <div *ngIf="submitted && addForm.controls.role.errors" class="errors">
+                        <div class="text-danger" *ngIf="addForm.controls.role.errors.required">
+                            Please select a role!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="success">
+                            <h2>SUBMIT</h2>
+                        </button>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <a class="danger" [routerLink]="['/admin']">
+                            <h2>CANCEL</h2>
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

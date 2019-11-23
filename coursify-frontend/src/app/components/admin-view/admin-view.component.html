@@ -1,0 +1,76 @@
+<div id="nav" class="container-fluid">
+    <div class="row">
+        <div id="inner-nav">
+            <h3 class="row">
+                <img src="../../../assets/images/todos.png" width="60px" />&nbsp;<h1 id="header-text">COURSIFY</h1>
+            </h3>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" id="view">
+    <div class="row" id="view-body">
+        <div class="col-md-12">
+            <div class="container-fluid" id="contains">
+                <div class="row">
+                    <div class="col-md-3 text-right" id="menus">
+                        <!--LogOut-->
+                        <button (click)="logOutUser()" id="logout">
+                            <h4 id="btn-align">LOGOUT</h4>
+                        </button>
+                        <hr />
+                        <!--DASHBOARD-->
+                        <div class="row">
+                            <div class="col text-right">
+                                <h4 class="primary-color">WELCOME,</h4>
+                                <h5 class="white-color">{{currentAdmin.firstName}} {{currentAdmin.lastName}}</h5>
+                                <h6 class="primary-color">{{currentAdmin.role}} ADMIN</h6>
+                            </div>
+                        </div>
+                        <hr />
+                        <!--Course-->
+                        <button *ngIf="(isCourse == true || isRoot == true)" (click)="setCourses()">
+                            <h2 id="btn-align">COURSES</h2>
+                        </button>
+                        <!--Course Options-->
+                        <ul *ngIf="(isCourse == true || isRoot == true)" id="router-links" [@fadeInOut]>
+                            <li id="router-link">
+                                <button [routerLink]="['/admin/add-course']">
+                                    <h6>ADD COURSE</h6>
+                                </button>
+                            </li>
+                        </ul>
+                        <!--Candidates-->
+                        <button *ngIf="(isCandidate == true || isRoot == true)" (click)="setCandidates()">
+                            <h2 id="btn-align">CANDIDATES</h2>
+                        </button>
+                        <!--Candidates Options-->
+                        <ul *ngIf="(isCandidate == true || isRoot == true)" id="router-links" [@fadeInOut]>
+                            <li id="router-link">
+                                <button [routerLink]="['/admin/add-candidates']">
+                                    <h6>ADD CANDIDATES</h6>
+                                </button>
+                            </li>
+                        </ul>
+                        <!--Administrator-->
+                        <button *ngIf="(isRoot == true)" (click)="setAdministrators()">
+                            <h2 id="btn-align">ADMINISTRATORS</h2>
+                        </button>
+
+                    </div>
+                    <div class="col-md-9" id="views">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="container-fluid">
+    <div class="row">
+        <div class="col text-center">
+            <h6>@COPYRIGHT G-PRODUCTIONS</h6>
+        </div>
+    </div>
+</footer>

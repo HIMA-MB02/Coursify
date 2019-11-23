@@ -1,0 +1,86 @@
+<div id="course-list" class="container-fluid" [@fadeInOut]>
+    <form [formGroup]="keyForm" (ngSubmit)="onSubmit()" class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <h2>APPROVE ADMINISTRATORS</h2>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-6 form-group text-left">
+                    <label>Email</label><br />
+                    <input type="text" placeholder="Email" class="form-control" formControlName="email" id="email" />
+                </div>
+                <div class="form-group col-md-3 text-left">
+                    <label>Role</label><br />
+                    <select class="form-control" formControlName="role">
+                        <option value="" selected>Select Role</option>
+                        <option value="COURSE_ADMIN" selected>COURSE ADMIN</option>
+                        <option value="CANDIDATE_ADMIN" selected>CANDIDATE ADMIN</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3 text-center">
+                    <label> </label><br />
+                    <button class="success">
+                        <h2>SEND</h2>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col">
+            <div id="table-section" class="row">
+                <div class="col text-center">
+                    <h3>ADMINISTRATORS</h3>
+                    <div class="row">
+                        <table class="col text-center">
+                            <tr id="table-heading">
+                                <th>
+                                    <button (click)="sort('')" id="sort-button">
+                                        x</button>
+                                </th>
+                                <th>
+                                    <button (click)="sort('firstName')" id="sort-button">
+                                        First Name
+                                    </button>
+                                </th>
+                                <th>
+                                    <button (click)="sort('lastName')" id="sort-button">
+                                        Last Name
+                                    </button>
+                                </th>
+                                <th>
+                                    <button (click)="sort('email')" id="sort-button">
+                                        Email
+                                    </button>
+                                </th>
+                                <th>
+                                    <button (click)="sort('role')" id="sort-button">
+                                        ROLE
+                                    </button>
+                                </th>
+                                <th>
+                                    OPTIONS
+                                </th>
+                            </tr>
+                            <tr class="table" *ngFor="let admin of administrators; let i = index">
+                                <td>{{i+1}}</td>
+                                <td>{{admin.firstName}}</td>
+                                <td>{{admin.lastName}}</td>
+                                <td>{{admin.email}}</td>
+                                <td>{{admin.role}}</td>
+                                <td>
+                                    <span id="delete" (click)="deleteAdministrator(admin)">
+                                        <i class="fa fa-trash fa-lg"></i>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

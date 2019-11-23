@@ -1,0 +1,89 @@
+<div class="container-fluid" id="addCourseComponent">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <div class="text-center">
+                        <h2>EDIT COURSE</h2>
+                    </div>
+                </div>
+                <!---Start of Course Name input Box-->
+                <div class="form-group">
+                    <input type="text" placeholder="Course Name" class="form-control" formControlName="courseName"
+                        id="courseName" />
+
+                    <div *ngIf="submitted && addForm.controls.courseName.errors" class="errors">
+                        <div class="text-danger" *ngIf="addForm.controls.courseName.errors.required">
+                            Please enter a Course Name!
+                        </div>
+                    </div>
+                </div>
+
+                <!---Start of Domain Name input Box-->
+                <div class="form-group">
+                    <input type="text" placeholder="Domain Name" class="form-control" formControlName="domainName"
+                        id="domainName" />
+
+                    <div *ngIf="submitted && addForm.controls.domainName.errors" class="errors">
+                        <div class="text-danger" *ngIf="addForm.controls.domainName.errors.required">
+                            Please enter a Domain Name!
+                        </div>
+                    </div>
+                </div>
+                <!---Start of Start Date input Box-->
+                <div class="form-group">
+                    <input type="text" placeholder="Start Date" class="form-control" formControlName="startDate"
+                        id="startDate" />
+
+                    <div *ngIf="submitted && addForm.controls.startDate.errors" class="errors">
+                        <div class="text-danger" *ngIf="addForm.controls.startDate.errors.required">
+                            Please enter a Start Date!
+                        </div>
+                    </div>
+                </div>
+
+                <!---Start of Trainer Name input Box-->
+                <div class="form-group">
+                    <input type="text" placeholder="Trainer Name" class="form-control" formControlName="trainerName"
+                        id="trainerName" />
+
+                    <div *ngIf="submitted && addForm.controls.trainerName.errors" class="errors">
+                        <div class="text-danger" *ngIf="addForm.controls.trainerName.errors.required">
+                            Please enter a Trainer Name!
+                        </div>
+                    </div>
+                </div>
+
+                <!---Start of Domain Name input Box-->
+                <div class="form-group">
+                    <!-- <input type="text" placeholder="Domain Name" class="form-control" formControlName="isActive"
+                        id="isActive" /> -->
+                    <select class="form-control" formControlName="isActive">
+                        <option value="" disabled selected>Select Status</option>
+                        <option value="true">ACTIVE</option>
+                        <option value="false">INACTIVE</option>
+                    </select>
+
+                    <div *ngIf="submitted && addForm.controls.isActive.errors" class="errors">
+                        <div class="text-danger" *ngIf="addForm.controls.isActive.errors.required">
+                            Please select a status!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="success">
+                            <h2>SUBMIT</h2>
+                        </button>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <a class="danger" [routerLink]="['/admin']">
+                            <h2>CANCEL</h2>
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

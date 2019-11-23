@@ -1,0 +1,115 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "courses": [
+    {
+      "id": 0,
+      "courseName": "Select  Course"
+    },
+    {
+      "id": 1,
+      "courseName": "JavaScript Full Stack",
+      "domainName": "Information Technology",
+      "startDate": "23/08/2019",
+      "trainerName": "Narendra G",
+      "isActive": true
+    },
+    {
+      "courseName": "Sadiya",
+      "domainName": "Sadiya",
+      "startDate": "23/09/2019",
+      "trainerName": "Sadiya",
+      "isActive": true,
+      "id": 9
+    },
+    {
+      "courseName": "Spring",
+      "domainName": "Java Programming",
+      "startDate": "23/09/2019",
+      "trainerName": "Shantanu B",
+      "isActive": true,
+      "id": 10
+    }
+  ],
+  "candidates": [
+    {
+      "id": 1,
+      "firstName": "Himanshu",
+      "lastName": "Ganapavarapu",
+      "age": "30",
+      "courses": [
+        {
+          "courseName": "Spring",
+          "domainName": "Java Programming",
+          "startDate": "23/09/2019",
+          "trainerName": "Shantanu B",
+          "isActive": true,
+          "id": 10
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "firstName": "Avinash",
+      "lastName": "Baradhwaj",
+      "age": "32",
+      "courses": [
+        {
+          "id": 1,
+          "courseName": "JavaScript Full Stack",
+          "domainName": "Information Technology",
+          "startDate": "23/08/2019",
+          "trainerName": "Narendra G",
+          "isActive": true
+        },
+        {
+          "courseName": "Saurabh",
+          "domainName": "Saurabh",
+          "startDate": "23/09/2019",
+          "trainerName": "Himanshu",
+          "isActive": false,
+          "id": 8
+        },
+        {
+          "courseName": "Sadiya",
+          "domainName": "Sadiya",
+          "startDate": "23/09/2019",
+          "trainerName": "Sadiya",
+          "isActive": true,
+          "id": 9
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "firstName": "Sadiya",
+      "lastName": "Anjum",
+      "age": "22",
+      "courses": [
+        {
+          "courseName": "Sadiya",
+          "domainName": "Sadiya",
+          "startDate": "23/09/2019",
+          "trainerName": "Sadiya",
+          "isActive": true,
+          "id": 9
+        }
+      ]
+    }
+  ]
+}
