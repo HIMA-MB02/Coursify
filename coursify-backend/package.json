@@ -1,0 +1,31 @@
+{
+  "name": "coursify-backend",
+  "version": "1.0.0",
+  "description": "NODE.JS MONGOOSE EXPRESS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NODE.JS",
+    "MONGOOSE",
+    "EXPRESS"
+  ],
+  "author": "Himanshu Ganapavarapu",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dateformat": "^3.0.3",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.4",
+    "morgan": "^1.9.1",
+    "node-schedule": "^1.3.2",
+    "nodemailer": "^6.3.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "path": "^0.12.7"
+  }
+}
